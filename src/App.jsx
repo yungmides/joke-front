@@ -14,7 +14,7 @@ function App() {
       setJoke(joke);
       setVersion(version);
     })();
-  });
+  }, []);
 
   return (
     <div className="App">
