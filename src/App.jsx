@@ -23,7 +23,7 @@ function App() {
           API Version : {version}
         </a>
         <a className="btn btn-ghost normal-case text-xl">
-          Front Version : 1
+          Front Version : {process.env.REACT_APP_VERSION}
         </a>
       </div>
       <div className="hero min-h-screen bg-base-200">
