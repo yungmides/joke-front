@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch("https://joke-app-iw4.herokuapp.com");
+      const res = await fetch(process.env.REACT_APP_JOKE_API_URL);
       const { joke, version } = await res.json();
 
       console.log({ joke, version });
@@ -15,7 +15,7 @@ function App() {
       setJoke(joke);
       setVersion(version);
     })();
-  }, []);
+  }, [process.env.REACT_APP_JOKE_API_URL]);
   return (
     <div className="App">
       <div className="navbar bg-base-100">
