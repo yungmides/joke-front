@@ -2,20 +2,21 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [joke, setJoke] = useState();
-  const [version, setVersion] = useState();
+  const [joke, setJoke] = useState()
+  const [version, setVersion] = useState()
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(process.env.REACT_APP_JOKE_API_URL);
-      const { joke, version } = await res.json();
+      const res = await fetch('https://joke-api-iw3.herokuapp.com')
 
-      console.log({ joke, version });
+      const {joke, version} = await res.json()
 
-      setJoke(joke);
-      setVersion(version);
-    })();
-  }, [process.env.REACT_APP_JOKE_API_URL]);
+      setJoke(joke)
+      setVersion(version)
+    })()
+  }, [])
+
+
   return (
     <div className="App">
       <div className="navbar bg-base-100">
