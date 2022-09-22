@@ -14,17 +14,17 @@ function App() {
       setJoke(joke);
       setVersion(version);
     })();
-  }, [process.env.REACT_APP_API_URL]);
+  });
 
   return (
     <div className="App">
       <div className="navbar bg-base-100">
-        <a className="btn btn-ghost normal-case text-xl">
+        <button className="btn btn-ghost normal-case text-xl">
           API Version : {version}
-        </a>
-        <a className="btn btn-ghost normal-case text-xl">
+        </button>
+        <button className="btn btn-ghost normal-case text-xl">
           Front Version : {process.env.REACT_APP_VERSION}
-        </a>
+        </button>
       </div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
